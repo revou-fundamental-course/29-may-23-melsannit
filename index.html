@@ -1,12 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible"
+        content="IE-edge">
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1.0">
+        <title>Home</title>
+        <link rel="stylesheet" href="css/style.css">
+
+        <style>
+            
+            @keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+            }
+
+            /* On smaller screens, decrease text size */
+            @media only screen and (max-width: 300px) {
+            .text {font-size: 11px}
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <img src="asset/revou-Logo.png" alt="revoU Logo" class="logo">
+            <nav class="nav-bar">
+                <a class="nav-item" href=""><b>Home</b></a>
+                <a class="nav-item" href="profile.html"><b>Profile</b></a>
+                <a class="nav-item" href=""><b>Portfolio</b></a>
+                <a class="nav-item" href="message.html"><b>Message Us</b></a>
+            </nav>
+        </header>
+        <hr color="black" size="3em">
+
+        <div class="bg"></div>
+        <div class="bg bg2"></div>
+        <div class="bg bg3"></div>
+
+        <div class="welcome">
+            <h1>Hi, Welcome to Sunny Travel Lombok!</h1>
+        </div>
+
+        <!--<script>
+            var yourName = prompt("Input Your Name");
+            var element = document.getElementById("yourName").innerText = yourName;
+        </script>-->
+
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="asset/rinjani.jpg" style="width:100%">
+              <div class="text">Rinjani Mountain</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="asset/sirkuit-mandalika.jpg" style="width:100%">
+              <div class="text">Mandalika Circuit</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="asset/gili-islands.jpg" style="width:100%">
+              <div class="text">Gili Islands</div>
+            </div>
+        </div>
+        <br>
+            
+        <div style="text-align:center">
+           <span class="dot"></span> 
+           <span class="dot"></span> 
+           <span class="dot"></span> 
+        </div>
+            
+            <script>
+            let slideIndex = 0;
+            showSlides();
+            
+            function showSlides() {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) {slideIndex = 1}    
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+              setTimeout(showSlides, 2000); 
+            }
+            </script>
+        <hr color="black" size="3em">
+
+        <div>
+            <h1>Visit Now!</h1>
+            <div>
+                <img src="asset/islamic-center.jpg" alt="Highlight" class="highlight">
+                <img src="asset/desa-sade.jpg" alt="Highlight" class="highlight">
+                <img src="asset/gili-meno.jpg" alt="Highlight" class="highlight">
+            </div>
+        </div>
+        <hr color="black" size="3em">
+        
+        <div class="form-section">
+            <form name="message-form" onsubmit="validateForm()">
+                <h1>Message Us <br /></h1>
+                Nama : <input placeholder="Nama" type="text" name="fullName"/> 
+                <br /> 
+
+                Tanggal Lahir : 
+                <input type="date" name="birthDate" /> 
+                <br /> 
+
+                Jenis Kelamin : 
+                <input type="radio" id="male" name="gender" value="Laki-laki" /> 
+                <label for="male">Laki-laki</label> 
+                <input type="radio" id="female" name="gender" value="Perempuan" /> 
+                <label for="female">Perempuan</label> 
+                <br /> 
+
+                Pesan : 
+                <textarea placeholder="Pesan" name="messages"></textarea> 
+                <br /> 
+                 
+                <input type="submit" id="kirim" value="Submit"/> 
+            </form>  
+
+            <script>
+                function validateForm() {
+                    var name = document.forms["message-form"]["fullName"].value;
+                    var date = document.forms["message-form"]["birthDate"].value;
+                    var gender = document.forms["message-form"]["gender"].value;
+                    var messages = document.forms["message-form"]["messages"].value;
+                    
+                    document.getElementById("sender-fullName").innerText = name;
+                    document.getElementById("sender-birthDate").innerText = date;
+                    document.getElementById("sender-gender").innerText = gender;
+                    document.getElementById("sender-messages").innerText = messages;
+                    return false;
+                }
+            </script>
+
+            <div class="form-output">
+                <p>Nama : <span id="sender-fullName"></span></p>
+                <p>Tanggal Lahir : <span id="sender-birthDate"></span></p>
+                <p>Jenis Kelamin : <span id="sender-gender"></span></p>
+                <p>Pesan : <span id="sender-messages"></span></p>
+            </div>
+
+            <div class="form-output">
+
+            </div>
+        
+        </div>
+        <hr color="black" size="3em">
+        
+        <footer class="footer">
+            <h2>Copyright &copy; RevoU 2023<h2>
+        </footer>
+
+    </body>
 </html>
