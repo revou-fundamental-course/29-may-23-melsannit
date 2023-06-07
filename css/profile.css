@@ -1,0 +1,110 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-bar {
+    display: flex;
+    border: 0px solid black;
+    border-radius: 4px;
+}
+
+.nav-item {
+    padding: 15px 1em;
+    width: 100px;
+    border-right: 0px solid black;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.nav-item:hover {
+    background: rgb(174, 202, 223) 50%;
+    margin-top: -3px;
+}
+
+.nav-bar:last-child {
+    border-right: none;
+}
+
+.logo {
+    height: 80px;
+    margin: 15px 15px;
+}
+
+html {
+    height:100%;
+  }
+  
+  body {
+    margin:0;
+  }
+  
+  .bg {
+    animation:slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, rgb(255, 255, 255) 50%, rgb(174, 202, 223) 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+  }
+  
+  .bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:4s;
+  }
+  
+  .bg3 {
+    animation-duration:5s;
+  }
+  
+  h1 {
+    font-family:monospace;
+  }
+
+  .paragraph {
+    background-image: url('../asset/lombok.jpg');
+    object-fit: cover;
+    padding: 4em 3em;
+    background-repeat: no-repeat;
+  }
+
+  .picture {
+    display: block;
+    width: 300px;
+     height: 200px;
+     padding: 20px 5px;
+     float: left;
+  }
+
+  .text {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    color: azure;
+    display: flexbox;
+    margin-left: 29px;
+    
+    
+
+  }
+  
+  @keyframes slide {
+    0% {
+      transform:translateX(-25%);
+    }
+    100% {
+      transform:translateX(25%);
+    }
+  }
+
+  .footer {
+    text-align: center;
+}
+
